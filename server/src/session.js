@@ -38,7 +38,7 @@ export function createSessionMiddleware({
     cookie: {
       httpOnly: true,
       secure: Boolean(secureCookies),
-      sameSite: 'lax',
+      sameSite: 'none',
       maxAge: sessionTtlMs,
     },
   })
