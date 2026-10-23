@@ -70,7 +70,7 @@ export function createApp({
       response.clearCookie(SESSION_COOKIE_NAME, {
         httpOnly: true,
         secure: Boolean(secureCookies),
-        sameSite: 'lax',
+        sameSite: 'none',
       })
     },
   }))
