@@ -1,0 +1,30 @@
+{
+  "name": "linkvault-server",
+  "version": "1.0.0",
+  "description": "LinkVault Express API scaffold",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon --exec \"node --import ./src/dns-preload.js\" src/server.js",
+    "start": "node --import ./src/dns-preload.js src/server.js",
+    "generate-password-hash": "node scripts/generate-password-hash.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/auth.js && node --check src/session.js && node --check src/config.js && node --check src/database.js && node --check src/dns-config.js && node --check src/dns-preload.js && node --check src/models/link.model.js && node --check src/models/click.model.js && node --check src/models/user.model.js && node --check src/utils/error-diagnostics.js && node --check src/utils/startup-error.js && node --check src/utils/validation.js && node --check src/utils/user-validation.js && node --check src/utils/date-range.js && node --check src/utils/http-error.js && node --check src/utils/random.js && node --check src/services/link.service.js && node --check src/controllers/link.controller.js && node --check src/routes/link.routes.js && node --check src/middleware/csrf.js && node --check src/middleware/error-handler.js && node --check scripts/generate-password-hash.js",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "supertest": "^7.3.1"
+  }
+}
